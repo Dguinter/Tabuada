@@ -19,7 +19,7 @@
         <div class="header-block">
             <input id="num" type="number">
             <div class="button">
-                <button onclick="tabuada()">Exibir</button><br />
+                <button onclick="tabuada()">Exibir</button>
             </div>
         </div>
         <div class="result">
@@ -27,22 +27,22 @@
         </div>
 
     </header>
+ <script>
+function tabuada() {
+    var num = parseInt(document.getElementById("num").value);
+    var resposta = document.getElementById('resposta');
+    var tabuada = '';
 
-    <script>
-        function tabuada() {
-            var num = parseInt(document.getElementById("num").value);
-            var resposta = document.getElementById('resposta');
-            var tabuada = '';
+     for (var count = 1; count <= 10; count++)
+        tabuada += num + " x " + count + " = " +
+            num * count + "<br />";
 
-            for (var count = 1; count <= 10; count++)
-                tabuada += num + " x " + count + " = " +
-                    num * count + "<br />";
+    resposta.innerHTML = tabuada;
 
-            resposta.innerHTML = tabuada;
+}
+</script>
 
-        }
-    </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
